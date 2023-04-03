@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Grid from './Grid/Grid'
 import Sidebar from '../Sidebar/Sidebar'
+import { addToDb, getShoppingCart } from '../../../utilities/fakedb';
 const Shop = () => {
     const [products, setProduct] = useState([]);
     const [slice, setSlice] = useState(6);
@@ -13,12 +14,17 @@ const Shop = () => {
         .then(productData => setProduct(productData))
     }, [])
 
+    useEffect( () => {
+
+    }, [])
+
     const sliceIncrase = () => {
         setSlice(slice + 6)
     }
 
     const handleCart = (product) => {
-        setAddToCart([...addToCart, product])
+        setAddToCart([...addToCart, product]);
+        addToDb(product.id)
     }
 
     return (
