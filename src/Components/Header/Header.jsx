@@ -3,7 +3,7 @@ import Logo from '../../images/Logo.svg'
 
 const Header = () => {
     return (
-        <div className='bg-slate-700 h-20 flex items-center justify-between px-40'>
+        <div className='bg-slate-700 h-24 flex items-center justify-between px-40'>
             <div className="logo">
                 <img src={Logo} alt="" />
             </div>
