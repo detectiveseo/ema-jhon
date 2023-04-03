@@ -15,8 +15,21 @@ const Shop = () => {
     }, [])
 
     useEffect( () => {
+        const storedLocalData = getShoppingCart();
+        const localStoredProducts = []
+        for(const id in storedLocalData){
+            const savedProducts = products.find(product => product.id == id);
 
-    }, [])
+            if(savedProducts){
+                const quantity = storedLocalData[id];
+                savedProducts.quantity = quantity;
+                localStoredProducts.push(savedProducts);
+            }
+           
+        }
+        setAddToCart(localStoredProducts)
+
+    }, [products])
 
     const sliceIncrase = () => {
         setSlice(slice + 6)
