@@ -39,7 +39,6 @@ const Shop = () => {
         setAddToCart([...addToCart, product]);
         addToDb(product.id)
     }
-
     return (
         <div className='grid gap-10 mx-20 mt-10' style={{gridTemplateColumns: "70fr 30Fr"}}>
             <div className='flex flex-col justify-center items-center'>

@@ -1,5 +1,6 @@
 import React from 'react';
-import Logo from '../../images/Logo.svg'
+import Logo from '../../images/Logo.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -8,10 +9,11 @@ const Header = () => {
                 <img src={Logo} alt="" />
             </div>
             <nav className='grid grid-flow-col gap-10 text-white list-none'>
-                <li><a href="">Order</a></li>
-                <li><a href="">Order Review</a></li>
-                <li><a href="">Manage Inventory</a></li>
-                <li><a href="">Login</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="shop">Shop</Link></li>
+                <li><Link to="users">users</Link></li>
+                <li><Link to="about">About us</Link></li>
+                <li><Link to="cart">Cart</Link></li>
             </nav>
         </div>
     );

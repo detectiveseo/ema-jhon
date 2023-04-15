@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Sidebar = ({addToCart}) => {
-    console.log(addToCart);
     let price = 0;
     let totalShipping = 0;
     let tax = 0;
