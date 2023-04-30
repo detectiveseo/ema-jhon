@@ -23,8 +23,8 @@ const Header = () => {
                 <li onClick={handleMenu} className='text-white list-none font-bold uppercase'>My Account</li>
 
                 <div className={`transition ease-in-out delay-150 absolute bg-slate-200 p-5 list-none text-1xl font-bold ${profileMenu ? "-mt-72" : "mt-0"}`}>
-                    <li>Profile</li>
-                    <li>Setting</li>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/registration">Registration</Link></li>
                 </div>
             </div>
         </div>
