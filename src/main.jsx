@@ -8,6 +8,8 @@ import Shop from './Components/Shop/Shop'
 import User from './Components/Users/User'
 import Singleuser from './Components/Users/Singleuser'
 import Cart from './Components/Users/Cart'
+import Singin from './Components/Account/Singin'
+import Singup from './Components/Account/Singup'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,8 +36,16 @@ const router = createBrowserRouter([
         path: "cart",
         element: <Cart></Cart>,
         loader: () => fetch('fakeData/products.json')
+      },
+      {
+        path: "login",
+        element: <Singin></Singin>
+      },
+      {
+        path: "registration",
+        element: <Singup></Singup>
       }
-    ] 
+    ]
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
